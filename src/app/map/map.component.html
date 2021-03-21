@@ -1,0 +1,28 @@
+<!-- <div id="mapid">
+    <div class="layer"  (mouseenter)="enter()" (mouseout)="out()" >
+        <ng-container *ngIf="iscall; then list else image"></ng-container>
+    </div>
+</div>
+
+<ng-template #list>
+    <ul>
+        <li *ngFor="let item of base">
+            <input type="checkbox">{{item}}
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #image>
+    <img src="../../assets/layers.svg" alt="">
+</ng-template> -->
+
+<div id="mapid">
+
+</div>
+<div class="layer">
+    <ul>
+        <li *ngFor="let item of base">
+            <input type="checkbox" [(ngModel)]="item.checked" (change)="eventCheck($event,item)">{{item.name}}
+        </li>
+    </ul>
+</div>
